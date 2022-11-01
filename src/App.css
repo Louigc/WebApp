@@ -1,0 +1,456 @@
+/* Her henter vi den font, som vi bruger på appen */
+@font-face {
+  font-family: OpenSans;
+  src: url("./assets/fonts/OpenSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Opensans;
+  src: url("./assets/fonts/OpenSans-Italic.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Opensans;
+  src: url("./assets/fonts/OpenSans-ExtraBold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Opensans;
+  src: url("./assets/fonts/OpenSans-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url("./assets/fonts/BebasNeue-Regular.ttf");
+  font-weight: 500;
+}
+
+/* Generel styling */
+html {
+  scroll-padding-top: 20px;
+}
+
+body {
+  background-image: url("./assets/images/baggrund.png");
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Opensans", sans-serif !important;
+  font-weight: 500 !important;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  margin: 0 !important;
+  padding: 0;
+  line-height: normal;
+  font-family: "BebasNeue", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 3.5px;
+  color: #000000;
+}
+
+h4 {
+  margin: 0 !important;
+  padding: 0;
+  line-height: normal;
+  font-family: "BebasNeue", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 3.5px;
+  color: #ffffff;
+}
+
+p {
+  line-height: normal;
+  font-family: "OpenSans", sans-serif !important;
+  font-weight: 500 !important;
+  color: #000000;
+}
+
+.App {
+  margin: 0 1rem 0 1rem;
+}
+
+.container {
+  margin: 0;
+  text-align: center;
+}
+/* ----------------------- */
+
+/* Styling af header */
+nav {
+  background-color: #fdf6a5;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+  color: rgb(25, 25, 25);
+  text-decoration: none;
+  margin: 0px 20px;
+  font-size: 1.7em;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+nav a:hover {
+  color: rgb(63, 63, 63);
+  opacity: 1;
+}
+
+.nav-logo {
+  width: 200px;
+}
+/* ----------------------- */
+
+/* Styling af tilføj abonnement knap på forsiden */
+
+.AddButton {
+  float: right;
+}
+
+.fixed-btn {
+  position: fixed !important;
+  bottom: 10%;
+  right: 5%;
+}
+
+.fixedView {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+/* ----------------------- */
+
+/* Styling af bokse på statistikside */
+
+.box-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  margin: 20px;
+}
+
+.box {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 13px;
+}
+
+.box1 {
+  background-color: rgba(255, 255, 255, 0.888);
+  grid-column: span 3;
+  grid-row: span 8;
+}
+
+.box2 {
+  background-color: rgba(255, 255, 255, 0.888);
+  grid-column: span 3;
+  grid-row: span 4;
+}
+
+.box3 {
+  background-color: rgba(255, 255, 255, 0.888);
+  grid-column: span 3;
+  grid-row: span 4;
+}
+
+.box4 {
+  background-color: rgba(255, 255, 255, 0.888);
+  grid-column: span 6;
+  grid-row: span 8;
+}
+
+.box5 {
+  background-color: rgba(255, 255, 255, 0.888);
+  grid-column: span 3;
+  grid-row: span 8;
+}
+
+.box6 {
+  background-color: rgba(255, 255, 255, 0.888);
+  grid-column: span 3;
+  grid-row: span 8;
+}
+
+.form-section {
+  padding: 0 1rem 0 1rem;
+}
+
+.inputfield {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0 10px 0;
+  padding: 10px 5px 10px 5px;
+}
+
+.AddIamgeButton {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 100%;
+  margin: 10px 0 10px 0;
+  padding: 5px;
+}
+
+.UploadImageButton {
+  width: 100%;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.AddSubscriptonButton {
+  width: 100% !important;
+  padding: 10px 5px 10px 5px !important;
+  border-radius: 5px !important;
+  margin-top: 30px !important;
+  background-color: #12664f !important;
+  border-color: #fdf6a5 !important;
+  color: #fdf6a5 !important;
+  font-weight: bold !important;
+}
+/* ----------------------- */
+
+/* Her styler vi en checkbox 1 */
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: #43b556;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-switch-label .react-switch-button {
+  content: "";
+  position: absolute;
+  left: 30px !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.react-switch-label:active .react-switch-button {
+  width: 30px;
+}
+
+.react-switch-checkbox:checked + .react-switch-label {
+  background: grey;
+}
+
+/* Her styler vi en checkbox 2 */
+
+.react-switch-checkbox2 {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: #43b556;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-switch-label2 .react-switch-button2 {
+  content: "";
+  position: absolute;
+  left: 30px !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox2:checked + .react-switch-label2 .react-switch-button2 {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.react-switch-label2:active .react-switch-button2 {
+  width: 30px;
+}
+
+.react-switch-checkbox2:checked + .react-switch-label2 {
+  background: grey;
+}
+/* ----------------------- */
+
+/* Styling af søgebaren på forsiden */
+
+form {
+  padding-left: 1%;
+  width: 100%;
+  margin: 4% 0 8% 0;
+}
+
+.inputField {
+  width: 55% !important;
+  padding: 15px;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16' %3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 95% center;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+/* Styling af filter forsiden */
+
+.dropdown {
+  width: 39%;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #656565;
+  border: none;
+  left: 4%;
+  justify-content: flex-end;
+}
+
+/* Styling af SUBS på forsiden */
+
+.subField {
+  background-color: rgba(255, 255, 255, 0.888);
+  padding: 3%;
+  margin: 4% 1% 4% 1%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.SubscriptionDetails {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.subField h1 {
+  color: #000000;
+  font-size: 20px;
+  text-shadow: none;
+}
+
+.subField h2 {
+  color: #000000;
+  font-size: 12px;
+  text-shadow: none;
+  padding-top: 5px;
+}
+
+/* Responsive */
+@media screen and (min-width: 500px) {
+  nav {
+    padding: 10px;
+  }
+
+  .fixed-btn {
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+  }
+
+  form {
+    margin: 2% 0 4% 0;
+  }
+
+  .inputField {
+    left: 3%;
+    width: 60%;
+  }
+
+  .dropdown {
+    width: 30%;
+    left: 14%;
+  }
+
+  .subField {
+    margin: 2% 1% 2% 1%;
+    padding: 2%;
+  }
+
+  .subField h1 {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url("./assets/images/background-ipad.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-image: url("./assets/images/background-web.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  div .field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .subField h1 {
+    font-size: 20px;
+  }
+}
+
